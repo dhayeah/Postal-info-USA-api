@@ -1,0 +1,21 @@
+import { Injectable } from '@angular/core';
+ 
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { map, catchError} from 'rxjs/operators';
+
+ 
+@Injectable()
+export class GitHubService {
+ 
+  baseURL: string = "https://api.zippopotam.us/us/";
+ 
+  constructor(private http: HttpClient) {
+  }
+ 
+  getRepos(userName: string): Observable<any> {
+    return this.http.get(this.baseURL + userName)
+  }
+ 
+}
+ 

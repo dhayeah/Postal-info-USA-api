@@ -1,0 +1,40 @@
+<body>
+<div>
+<b><label for="fname" style="font-family: calibri;font-size: 18px;">Enter your postal code :</label></b>
+<!-- <input (keyup)="onKey($event)">
+  <p>{{values}}</p>
+-->
+
+<input type='text' placeholder="eg:50084" id='message'>
+<button class="button" type="submit" (click)="Sendpin()">Get info</button>
+
+</div>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>values</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Place name</td>
+            <td>{{pname}}</td>
+        </tr>
+        <tr class="active-row">
+            <td>State</td>
+            <td>{{states}}</td>
+        </tr>
+        <tr class="active-row">
+            <td>Latitude</td>
+            <td>{{lat}}</td>
+        </tr>
+        <tr class="active-row">
+            <td>Longitude</td>
+            <td>{{long}}</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
